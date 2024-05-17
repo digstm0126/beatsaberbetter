@@ -18,4 +18,6 @@ public class beat : MonoBehaviour
     {
         transform.position += Time.deltaTime * transform.forward * speed;
     }
+
+
 }
