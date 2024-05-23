@@ -34,12 +34,14 @@ public class beatSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-   
 
-        gorilaz.Add(new note(1, 0, ));
-        gorilaz.Add(new note(3, 4));
-        gorilaz.Add(new note(4, 8));
-        gorilaz.Add(new note(4, 12));
+
+        gorilaz.Add(new note(7, 0, 3, 0));
+        gorilaz.Add(new note(9, 4, 1, 0));
+        gorilaz.Add(new note(7, 8, 3, 0));
+        gorilaz.Add(new note(9, 12, 1, 0));
+        gorilaz.Add(new note(7, 16, 3, 0));
+        gorilaz.Add(new note(9, 20, 1, 0));
 
 
         gorilaz.Sort();
