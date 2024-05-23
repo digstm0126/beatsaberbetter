@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7700752244933929418}
   - component: {fileID: 3450382873498624502}
   - component: {fileID: 2119663726201521395}
+  - component: {fileID: -7718771529297205224}
   m_Layer: 0
   m_Name: blue beat
   m_TagString: Untagged
@@ -100,7 +101,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -119,3 +120,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+--- !u!114 &-7718771529297205224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3402337336983646226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712e38e503a944f4f82b3ef412e216c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shatedobj: {fileID: 7153725119594232222, guid: 40768fcf2c3ae4447a53c768845cedf1, type: 3}

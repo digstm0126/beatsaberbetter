@@ -184,10 +184,10 @@ MonoBehaviour:
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6677355085896350176}
-        m_TargetAssemblyTypeName: ball, Assembly-CSharp
-        m_MethodName: IsGrabed
-        m_Mode: 1
+      - m_Target: {fileID: 9195602660168847312}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

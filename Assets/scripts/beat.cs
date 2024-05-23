@@ -5,7 +5,7 @@ using UnityEngine;
 public class beat : MonoBehaviour
 {
     //speed of beat block
-    [SerializeField] float speed = 2.0f;
+    [SerializeField] float speed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
