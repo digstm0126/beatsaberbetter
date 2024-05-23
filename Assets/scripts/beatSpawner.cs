@@ -36,7 +36,7 @@ public class beatSpawner : MonoBehaviour
     {
    
 
-        gorilaz.Add(new note(1, 0));
+        gorilaz.Add(new note(1, 0, ));
         gorilaz.Add(new note(3, 4));
         gorilaz.Add(new note(4, 8));
         gorilaz.Add(new note(4, 12));
