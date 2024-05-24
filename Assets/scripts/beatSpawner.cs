@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,6 +19,8 @@ public class beatSpawner : MonoBehaviour
 
     public int notenumber;
 
+    public GameObject hitpoint;
+
     float nextBeatToSpawnNote = 0.0f;
 
     List<note> gorilaz = new List<note>();
@@ -27,42 +31,45 @@ public class beatSpawner : MonoBehaviour
 
     void spawnBeat()
     {
-        Instantiate(cubes[Random.Range(0, cubes.Length)], spawnpoints[Random.Range(0, spawnpoints.Length)]);
-        //Instantiate(BALLS[Random.Range(0, BALLS.Length)], BallSpawnpoints[Random.Range(0, BallSpawnpoints.Length)]);
+        Instantiate(cubes[gorilaz[notenumber].colur - 1], spawnpoints[gorilaz[notenumber].postion - 1]);
+        Instantiate(BALLS[gorilaz[notenumber].colur - 1], spawnpoints[gorilaz[notenumber].ballpostion - 1]);
     }
 
     // Start is called before the first frame update
     void Start()
     {
 
-
-        gorilaz.Add(new note(7, 0, 3, 0));
-        gorilaz.Add(new note(9, 4, 1, 0));
-        gorilaz.Add(new note(7, 8, 3, 0));
-        gorilaz.Add(new note(9, 12, 1, 0));
-        gorilaz.Add(new note(7, 16, 3, 0));
-        gorilaz.Add(new note(9, 20, 1, 0));
+        gorilaz.Add(new note(7, 0, 3, 0, 1));
+        gorilaz.Add(new note(9, 4, 1, 0, 2));
+        gorilaz.Add(new note(7, 8, 3, 0, 1));
+        gorilaz.Add(new note(9, 12, 1, 0, 2));
+        gorilaz.Add(new note(7, 16, 3, 0, 1));
+        gorilaz.Add(new note(9, 20, 1, 0, 2));
 
 
         gorilaz.Sort();
-        foreach (note note in gorilaz)
-        {
-            Debug.Log(note.onbeat);
-        }
 
         nextBeatToSpawnNote = (float)gorilaz[0].onbeat;
+
+        
+
+        gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
+        Debug.Log(gameObject.name);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (soundManager.songPositionInBeats >= nextBeatToSpawnNote)
+        //& notenumber < gorilaz.Count
+        if (soundManager.songPositionInBeats >= (float)nextBeatToSpawnNote)
         {
             spawnBeat();
             Debug.Log("beat");
-            nextBeatToSpawnNote = (float)gorilaz[notenumber].onbeat;
             notenumber += 1;
+            nextBeatToSpawnNote = (float)gorilaz[notenumber].onbeat;
+            Debug.Log(gorilaz[notenumber].onbeat);
+            Debug.Log(notenumber);
+            Debug.Log(nextBeatToSpawnNote);
         }
     }
 }

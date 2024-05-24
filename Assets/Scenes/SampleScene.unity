@@ -1667,7 +1667,6 @@ GameObject:
   m_Component:
   - component: {fileID: 698861513}
   - component: {fileID: 698861512}
-  - component: {fileID: 698861514}
   m_Layer: 0
   m_Name: spawner
   m_TagString: Untagged
@@ -1691,8 +1690,8 @@ MonoBehaviour:
   - {fileID: 3402337336983646226, guid: f567fe1cfe3f31c4a87276f8c2c455ff, type: 3}
   - {fileID: 440858986635549261, guid: cfaf91a7aa6f79b4aaad56536117de66, type: 3}
   BALLS:
-  - {fileID: 3776340113465446087, guid: 2a1bfc1a570f98d46a1654b497f09e47, type: 3}
   - {fileID: 2849839247537578344, guid: ec8c3c5400ca83a4bbb42e77ad8878cb, type: 3}
+  - {fileID: 3776340113465446087, guid: 2a1bfc1a570f98d46a1654b497f09e47, type: 3}
   spawnpoints:
   - {fileID: 1282027327}
   - {fileID: 810948337}
@@ -1719,7 +1718,7 @@ Transform:
   m_GameObject: {fileID: 698861511}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 66.66667}
+  m_LocalPosition: {x: 0, y: 0, z: 15}
   m_LocalScale: {x: 0.5, y: 0.25, z: 3.333333}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1727,18 +1726,6 @@ Transform:
   - {fileID: 794232534}
   m_Father: {fileID: 820276736}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &698861514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698861511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d345c8a7651db2438d0a2173a083796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2665,7 +2652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4ad8b04487a564694379a8a685eabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstBeatOffset: 0.5
+  firstBeatOffset: 5
   songBpm: 90
   songPositionInBeats: 0
   muicTrack: {fileID: 8300000, guid: bdc9c21c1910f344c8d7bdfe71faef6a, type: 3}

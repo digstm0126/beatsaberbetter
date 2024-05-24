@@ -6,8 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     AudioSource audioSource;
 
-    [SerializeField]
-    float firstBeatOffset;
+    public float firstBeatOffset;
 
     //the songs bpm
     public float songBpm;
@@ -24,6 +23,9 @@ public class SoundManager : MonoBehaviour
     //how long the song been going for
     float dspSongTime;
 
+    //see if its plaing 
+    bool playing = false;
+
 
 
     public AudioClip muicTrack;
@@ -37,17 +39,27 @@ public class SoundManager : MonoBehaviour
 
         dspSongTime = (float)AudioSettings.dspTime;
 
-        playMusicTrack();
+
+
     }
 
     void playMusicTrack()
     {
         audioSource.PlayOneShot(muicTrack);
+        
     }
+
     // Update is called once per frame
     void Update()
     {
-        songPosition = (float)(AudioSettings.dspTime - dspSongTime - firstBeatOffset);
+        if (songPositionInBeats - firstBeatOffset > 0 && playing == false)
+        {
+            playMusicTrack();
+            playing = true;
+
+        }
+
+        songPosition = (float)(AudioSettings.dspTime - dspSongTime);
 
         songPositionInBeats = songPosition / secPerBeat;
     }

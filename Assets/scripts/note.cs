@@ -17,15 +17,20 @@ public class note : IComparable<note>
     //the beat it spawns on
     public int onbeat;
 
-    public note(int NewPostion, int NewOnbeat, int newBallpostion, int NewDist)
+    //color of beat
+    public int colur;
+
+    public note(int NewPostion, int NewOnbeat, int newBallpostion, int NewDist, int newcolulr)
     {
         postion = NewPostion;
 
-        ballpostion = NewOnbeat;
+        ballpostion = newBallpostion;
 
         balldistintce = 1;
 
         onbeat = NewOnbeat;
+
+        colur = newcolulr;
     }
 
     public int CompareTo(note other)
