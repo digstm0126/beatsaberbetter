@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1629662613500431674}
   - component: {fileID: 9195602660168847312}
   - component: {fileID: 6677355085896350176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ball blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2849839247537578344}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -154,7 +154,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -312,7 +312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee77c2fb6a148d43b00da8749330cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
 --- !u!114 &6677355085896350176
 MonoBehaviour:
   m_ObjectHideFlags: 0

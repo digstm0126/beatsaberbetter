@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3450382873498624502}
   - component: {fileID: 2119663726201521395}
   - component: {fileID: -7718771529297205224}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: blue beat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee77c2fb6a148d43b00da8749330cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
 --- !u!114 &-7718771529297205224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,3 +132,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatedobj: {fileID: 7153725119594232222, guid: 40768fcf2c3ae4447a53c768845cedf1, type: 3}
+  score: 0

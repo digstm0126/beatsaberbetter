@@ -54,13 +54,12 @@ public class beatSpawner : MonoBehaviour
         
 
         gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
-        Debug.Log(gameObject.name);
+  
     }
 
     // Update is called once per frame
     void Update()
     {
-        //& notenumber < gorilaz.Count
         if (soundManager.songPositionInBeats >= (float)nextBeatToSpawnNote && notenumber < gorilaz.Count - 1)
         {
             spawnBeat();
