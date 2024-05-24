@@ -61,15 +61,11 @@ public class beatSpawner : MonoBehaviour
     void Update()
     {
         //& notenumber < gorilaz.Count
-        if (soundManager.songPositionInBeats >= (float)nextBeatToSpawnNote)
+        if (soundManager.songPositionInBeats >= (float)nextBeatToSpawnNote && notenumber < gorilaz.Count - 1)
         {
             spawnBeat();
-            Debug.Log("beat");
             notenumber += 1;
             nextBeatToSpawnNote = (float)gorilaz[notenumber].onbeat;
-            Debug.Log(gorilaz[notenumber].onbeat);
-            Debug.Log(notenumber);
-            Debug.Log(nextBeatToSpawnNote);
         }
     }
 }
