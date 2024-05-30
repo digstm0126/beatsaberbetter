@@ -55,7 +55,7 @@ public class SoundManager : MonoBehaviour
         if (songPositionInBeats - firstBeatOffset > 0 && playing == false)
         {
             playMusicTrack();
-            playing = true;
+            playing = true; 
 
         }
 
