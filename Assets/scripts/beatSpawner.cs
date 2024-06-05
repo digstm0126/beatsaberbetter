@@ -26,13 +26,14 @@ public class beatSpawner : MonoBehaviour
     List<note> gorilaz = new List<note>();
 
 
-
+   
 
 
     void spawnBeat()
     {
         Instantiate(cubes[gorilaz[notenumber].colur - 1], spawnpoints[gorilaz[notenumber].postion - 1]);
-        Instantiate(BALLS[gorilaz[notenumber].colur - 1], spawnpoints[gorilaz[notenumber].ballpostion - 1]);
+        Instantiate(BALLS[gorilaz[notenumber].colur - 1], new Vector3(0,0,0), , spawnpoints[gorilaz[notenumber].ballpostion - 1]);
+
     }
 
     // Start is called before the first frame update

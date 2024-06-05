@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4053211890131616749}
   - component: {fileID: 5306828239608036938}
   - component: {fileID: 3913845541106383936}
-  m_Layer: 7
+  m_Layer: 10
   m_Name: red beat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,4 +132,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shatedobj: {fileID: 7153725119594232222, guid: d6f556977ec5f2a489e956df4df4caa5, type: 3}
+  hitbox: {fileID: 0}
   score: 0

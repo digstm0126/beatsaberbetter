@@ -26,6 +26,10 @@ public class SoundManager : MonoBehaviour
     //see if its plaing 
     bool playing = false;
 
+    public bool startgame = false;
+
+    public bool runing = false;
+
 
 
     public AudioClip muicTrack;
@@ -39,6 +43,7 @@ public class SoundManager : MonoBehaviour
 
         dspSongTime = (float)AudioSettings.dspTime;
 
+        songPositionInBeats = -1;
 
 
     }
@@ -49,18 +54,38 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    public void clicked()
+    {
+        startgame = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
+
         if (songPositionInBeats - firstBeatOffset > 0 && playing == false)
         {
             playMusicTrack();
             playing = true; 
 
+
         }
 
-        songPosition = (float)(AudioSettings.dspTime - dspSongTime);
+        if (startgame == true)
+        {
+            runing = true;
 
-        songPositionInBeats = songPosition / secPerBeat;
+            dspSongTime = (float)AudioSettings.dspTime;
+            startgame = false;
+        }
+
+        if (runing == true)
+        {
+            songPosition = (float)(AudioSettings.dspTime - dspSongTime);
+
+            songPositionInBeats = songPosition / secPerBeat;
+        }
+
+
     }
 }

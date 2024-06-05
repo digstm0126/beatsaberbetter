@@ -30,12 +30,15 @@ public class box : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.layer == gameObject.layer)
+        {
             Debug.Log(score);
-            Instantiate(shatedobj, transform.position, transform.rotation);
-            Destroy(gameObject);
             scoreManager.instance.addpoint(score);
+        }
 
-
+        Instantiate(shatedobj, transform.position, transform.rotation);
+        Destroy(gameObject);
+        
     }
 
 
