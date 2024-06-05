@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class note : IComparable<note>
+public class note
 {
     //where the note is spawned
     public int postion;
@@ -15,31 +15,31 @@ public class note : IComparable<note>
     public int balldistintce;
 
     //the beat it spawns on
-    public int onbeat;
+    public float onbeat;
 
     //color of beat
     public int colur;
 
-    public note(int NewPostion, int NewOnbeat, int newBallpostion, int NewDist, int newcolulr)
+    public note(int NewPostion, float NewOnbeat, int newBallpostion, int NewDist, int newcolulr, int newDistintce)
     {
         postion = NewPostion;
 
         ballpostion = newBallpostion;
 
-        balldistintce = 1;
+        balldistintce = newDistintce;
 
         onbeat = NewOnbeat;
 
         colur = newcolulr;
     }
 
-    public int CompareTo(note other)
+/*    public int CompareTo(note other)
     {
         if (other == null)
         {
             return 1;
         }
 
-        return onbeat - other.onbeat;
-    }
+        return (onbeat - other.onbeat;
+    }*/
 }

@@ -11,6 +11,8 @@ public class SoundManager : MonoBehaviour
     //the songs bpm
     public float songBpm;
 
+    public float beatSpotNice;
+
     //song spot in beats
     public float songPositionInBeats;
 
@@ -86,6 +88,7 @@ public class SoundManager : MonoBehaviour
             songPositionInBeats = songPosition / secPerBeat;
         }
 
+        beatSpotNice = songPositionInBeats - firstBeatOffset;
 
     }
 }

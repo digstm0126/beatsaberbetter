@@ -26,13 +26,14 @@ public class beatSpawner : MonoBehaviour
     List<note> gorilaz = new List<note>();
 
 
+
    
 
 
     void spawnBeat()
     {
         Instantiate(cubes[gorilaz[notenumber].colur - 1], spawnpoints[gorilaz[notenumber].postion - 1]);
-        Instantiate(BALLS[gorilaz[notenumber].colur - 1], new Vector3(0,0,0), , spawnpoints[gorilaz[notenumber].ballpostion - 1]);
+        Instantiate(BALLS[gorilaz[notenumber].colur - 1], new Vector3(spawnpoints[gorilaz[notenumber].ballpostion - 1].position.x, spawnpoints[gorilaz[notenumber].ballpostion - 1].position.y, spawnpoints[gorilaz[notenumber].ballpostion - 1].position.z - gorilaz[notenumber].balldistintce), new Quaternion(0,180,0,0));
 
     }
 
@@ -40,15 +41,20 @@ public class beatSpawner : MonoBehaviour
     void Start()
     {
 
-        gorilaz.Add(new note(7, 0, 3, 0, 1));
-        gorilaz.Add(new note(9, 4, 1, 0, 2));
-        gorilaz.Add(new note(7, 8, 3, 0, 1));
-        gorilaz.Add(new note(9, 12, 1, 0, 2));
-        gorilaz.Add(new note(7, 16, 3, 0, 1));
-        gorilaz.Add(new note(9, 20, 1, 0, 2));
+        gorilaz.Add(new note(7, 0, 3, 0, 1, 1));
+        gorilaz.Add(new note(9, 2, 1, 0, 2, 1));
+        gorilaz.Add(new note(7, 5, 3, 0, 1, 1));
+        gorilaz.Add(new note(9, 6, 1, 0, 2, 1));
+        gorilaz.Add(new note(7, 9, 3, 0, 1, 1));
+        gorilaz.Add(new note(9, 10, 1, 0, 2, 1));
+        gorilaz.Add(new note(7, 13, 3, 0, 1, 1));
+        gorilaz.Add(new note(9, 14, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 17, 6, 0, 1, 0));
+        gorilaz.Add(new note(1, 17.5f, 4, 0, 2, 0));
+        gorilaz.Add(new note(9, 18, 6, 0, 1, 0));
 
 
-        gorilaz.Sort();
+
 
         nextBeatToSpawnNote = (float)gorilaz[0].onbeat;
 
