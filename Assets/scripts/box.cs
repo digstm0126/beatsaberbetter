@@ -30,14 +30,13 @@ public class box : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == gameObject.layer)
+        if (other.gameObject.layer == gameObject.layer && other.gameObject.tag == "moving ball")
         {
             Debug.Log(score);
-            scoreManager.instance.addpoint(score);
+            scoreManager.instance.addpoint(score); 
+            Instantiate(shatedobj, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
-
-        Instantiate(shatedobj, transform.position, transform.rotation);
-        Destroy(gameObject);
         
     }
 
