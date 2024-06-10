@@ -49,9 +49,37 @@ public class beatSpawner : MonoBehaviour
         gorilaz.Add(new note(9, 10, 1, 0, 2, 1));
         gorilaz.Add(new note(7, 13, 3, 0, 1, 1));
         gorilaz.Add(new note(9, 14, 1, 0, 2, 1));
-        gorilaz.Add(new note(9, 17, 6, 0, 1, 0));
-        gorilaz.Add(new note(1, 17.5f, 4, 0, 2, 0));
-        gorilaz.Add(new note(9, 18, 6, 0, 1, 0));
+        //sim 
+        gorilaz.Add(new note(9, 17, 6, 0, 2, 0));
+        //sima
+        gorilaz.Add(new note(1, 17.5f, 4, 0, 1, 0));
+        //4 red on side
+        gorilaz.Add(new note(9, 22, 6, 0, 2, 0));
+        gorilaz.Add(new note(9, 24, 6, 0, 2, 0));
+        gorilaz.Add(new note(9, 26, 6, 0, 2, 0));
+        gorilaz.Add(new note(9, 28, 6, 0, 2, 0));
+        //4 blue pull down left
+        gorilaz.Add(new note(7, 30, 3, 0, 1, 1));
+        gorilaz.Add(new note(7, 32, 3, 0, 1, 1));
+        gorilaz.Add(new note(7, 34, 3, 0, 1, 1));
+        gorilaz.Add(new note(7, 36, 3, 0, 1, 1));
+        //4 red pull down right
+        gorilaz.Add(new note(9, 38, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 40, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 42, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 44, 1, 0, 2, 1));
+        //4 blue pull down left
+        gorilaz.Add(new note(7, 46, 3, 0, 1, 1));
+        gorilaz.Add(new note(7, 48, 3, 0, 1, 1));
+        gorilaz.Add(new note(7, 50, 3, 0, 1, 1));
+        gorilaz.Add(new note(7, 52, 3, 0, 1, 1));
+        //4 red pull down right
+        gorilaz.Add(new note(9, 54, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 56, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 58, 1, 0, 2, 1));
+        gorilaz.Add(new note(9, 60, 1, 0, 2, 1));
+
+
 
 
 

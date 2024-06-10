@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: cb23ce9d01fd0c54ea9bffaffdc35a58, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.23297662, g: 0.3397321, b: 0.3449418, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -470,6 +470,7 @@ Transform:
   m_Children:
   - {fileID: 1807359111}
   - {fileID: 1058864397}
+  - {fileID: 1225101167}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &190407070
@@ -1035,11 +1036,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cubes:
-  - {fileID: 3402337336983646226, guid: f567fe1cfe3f31c4a87276f8c2c455ff, type: 3}
-  - {fileID: 7544611718081578954, guid: a5624bbe991b34447b4131998531b9d8, type: 3}
+  - {fileID: 3037759373969844311, guid: c12a370b1e4529f4aa221cbc5a209391, type: 3}
+  - {fileID: 3037759373969844311, guid: 96db804e2518d6641b5ffbeebd7f6eae, type: 3}
   BALLS:
-  - {fileID: 2849839247537578344, guid: ec8c3c5400ca83a4bbb42e77ad8878cb, type: 3}
-  - {fileID: 3776340113465446087, guid: 2a1bfc1a570f98d46a1654b497f09e47, type: 3}
+  - {fileID: 7157415108722980282, guid: ef600452f2a134c47833002874556bd1, type: 3}
+  - {fileID: 7157415108722980282, guid: 7ad1d3eb1ec5b314f8db4032a4d14f68, type: 3}
   spawnpoints:
   - {fileID: 1282027327}
   - {fileID: 810948337}
@@ -2069,7 +2070,7 @@ GameObject:
   - component: {fileID: 1058864399}
   - component: {fileID: 1058864398}
   m_Layer: 0
-  m_Name: floor (1)
+  m_Name: PlatformFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2226,6 +2227,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 874010465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1225101166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225101167}
+  - component: {fileID: 1225101169}
+  - component: {fileID: 1225101168}
+  m_Layer: 0
+  m_Name: BackWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225101167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225101166}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: -2}
+  m_LocalScale: {x: 6, y: 4, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 174891647}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225101168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225101166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1231a6026610bf84b878219d50b8c98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1225101169
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225101166}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1249571915
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,7 +3091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a4ad8b04487a564694379a8a685eabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstBeatOffset: 10
+  firstBeatOffset: 5
   songBpm: 90
   beatSpotNice: 0
   songPositionInBeats: 0
