@@ -32,7 +32,6 @@ public class box : MonoBehaviour
     {
         if (other.gameObject.layer == gameObject.layer && other.gameObject.tag == "moving ball")
         {
-            Debug.Log(score);
             scoreManager.instance.addpoint(score); 
             Instantiate(shatedobj, transform.position, transform.rotation);
             Destroy(gameObject);

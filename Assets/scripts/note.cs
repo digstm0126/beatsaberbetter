@@ -32,14 +32,4 @@ public class note
 
         colur = newcolulr;
     }
-
-/*    public int CompareTo(note other)
-    {
-        if (other == null)
-        {
-            return 1;
-        }
-
-        return (onbeat - other.onbeat;
-    }*/
 }
