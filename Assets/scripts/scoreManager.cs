@@ -28,7 +28,7 @@ public class scoreManager : MonoBehaviour
     public void addpoint(int scoretoadd)
     {
         scoreCount = scoreCount + scoretoadd;
-        scoreText.text = "score" + scoreCount.ToString();
+        scoreText.text = "score: " + scoreCount.ToString();
     }
     // Update is called once per frame
     void Update()

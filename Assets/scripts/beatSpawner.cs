@@ -27,17 +27,17 @@ public class beatSpawner : MonoBehaviour
 
     List<note> gorilaz = new List<note>();
 
-    public bool SongIsGorilaz = true;
+    public AudioClip gorilazClip;
 
     List<note> Song2 = new List<note>();
 
-    public bool SongIsSong2;
-
-    
+    public AudioClip Song2Clip;
 
 
 
-   
+
+
+
 
 
     void spawnBeat()
@@ -164,6 +164,8 @@ public class beatSpawner : MonoBehaviour
 
         nextBeatToSpawnNote = 1;
 
+        soundManager.setTrack(gorilazClip);
+
         gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
     }
 
@@ -188,6 +190,8 @@ public class beatSpawner : MonoBehaviour
         soundManager.firstBeatOffset = 12;
 
         nextBeatToSpawnNote = 1;
+
+        soundManager.setTrack(Song2Clip);
 
         gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
     }

@@ -56,6 +56,11 @@ public class SoundManager : MonoBehaviour
         
     }
 
+    public void setTrack(AudioClip secectSong)
+    {
+        muicTrack = secectSong;
+    }
+
     public void clicked()
     {
         startgame = true;
