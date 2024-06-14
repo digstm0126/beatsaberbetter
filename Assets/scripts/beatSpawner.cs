@@ -9,7 +9,7 @@ public class beatSpawner : MonoBehaviour
 {
     public GameObject[] cubes;
 
-    public GameObject[] BALLS;    
+    public GameObject[] BALLS;
 
     public Transform[] spawnpoints;
 
@@ -23,7 +23,17 @@ public class beatSpawner : MonoBehaviour
 
     float nextBeatToSpawnNote = 0.0f;
 
+    List<note> CurntSong;
+
     List<note> gorilaz = new List<note>();
+
+    public bool SongIsGorilaz = true;
+
+    List<note> Song2 = new List<note>();
+
+    public bool SongIsSong2;
+
+    
 
 
 
@@ -32,14 +42,15 @@ public class beatSpawner : MonoBehaviour
 
     void spawnBeat()
     {
-        Instantiate(cubes[gorilaz[notenumber].colur - 1], spawnpoints[gorilaz[notenumber].postion - 1]);
-        Instantiate(BALLS[gorilaz[notenumber].colur - 1], new Vector3(spawnpoints[gorilaz[notenumber].ballpostion - 1].position.x, spawnpoints[gorilaz[notenumber].ballpostion - 1].position.y, spawnpoints[gorilaz[notenumber].ballpostion - 1].position.z - gorilaz[notenumber].balldistintce), new Quaternion(0,180,0,0));
+        Instantiate(cubes[CurntSong[notenumber].colur - 1], spawnpoints[CurntSong[notenumber].postion - 1]);
+        Instantiate(BALLS[CurntSong[notenumber].colur - 1], new Vector3(spawnpoints[CurntSong[notenumber].ballpostion - 1].position.x, spawnpoints[CurntSong[notenumber].ballpostion - 1].position.y, spawnpoints[CurntSong[notenumber].ballpostion - 1].position.z - CurntSong[notenumber].balldistintce), new Quaternion(0,180,0,0));
 
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void garilaz()
     {
+        
+
         //ba ba bum bumb ba ba
         gorilaz.Add(new note(7, 0, 3, 0, 1, 1));
         gorilaz.Add(new note(9, 2, 1, 0, 2, 1));
@@ -143,23 +154,62 @@ public class beatSpawner : MonoBehaviour
         gorilaz.Add(new note(7, 156, 3, 0, 1, 1));
         gorilaz.Add(new note(9, 157, 1, 0, 2, 1));
 
+        CurntSong = gorilaz;
 
-        nextBeatToSpawnNote = (float)gorilaz[0].onbeat;
+        nextBeatToSpawnNote = (float)CurntSong[0].onbeat;
+
+        soundManager.songBpm = 90;
+
+        soundManager.firstBeatOffset = 10;
+
+        nextBeatToSpawnNote = 1;
+
+        gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
+    }
+
+    public void song2Make()
+    {
+        //get pranked
+        Song2.Add(new note(1, 0, 3, 0, 1, 1));
+        Song2.Add(new note(1, 2, 1, 0, 2, 1));
+        Song2.Add(new note(1, 5, 3, 0, 1, 1));
+        Song2.Add(new note(1, 6, 1, 0, 2, 1));
+        Song2.Add(new note(1, 9, 3, 0, 1, 1));
+        Song2.Add(new note(1, 10, 1, 0, 2, 1));
+        Song2.Add(new note(1, 13, 3, 0, 1, 1));
+        Song2.Add(new note(1, 14, 1, 0, 2, 1));
+
+        CurntSong = Song2;
+
+        nextBeatToSpawnNote = (float)CurntSong[0].onbeat;
+
+        soundManager.songBpm = 90;
+
+        soundManager.firstBeatOffset = 12;
+
+        nextBeatToSpawnNote = 1;
+
+        gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
 
         
 
-        gameObject.transform.position = hitpoint.transform.position + new Vector3(0, 0, 60 / soundManager.songBpm * soundManager.firstBeatOffset);
-  
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (soundManager.songPositionInBeats >= (float)nextBeatToSpawnNote && notenumber < gorilaz.Count - 1)
+        if (soundManager.songPositionInBeats >= (float)nextBeatToSpawnNote && notenumber < CurntSong.Count - 1)
         {
             spawnBeat();
             notenumber += 1;
-            nextBeatToSpawnNote = (float)gorilaz[notenumber].onbeat;
+            nextBeatToSpawnNote = (float)CurntSong[notenumber].onbeat;
         }
     }
 }
