@@ -1318,8 +1318,8 @@ MonoBehaviour:
   soundManager: {fileID: 1454849423}
   notenumber: 0
   hitpoint: {fileID: 820276732}
-  SongIsGorilaz: 0
-  SongIsSong2: 1
+  gorilazClip: {fileID: 8300000, guid: d1c212467d7d660438308463c17b1090, type: 3}
+  Song2Clip: {fileID: 8300000, guid: 03d4f3e6cd1bc4f4c88c659e2a0bf821, type: 3}
 --- !u!4 &698861513
 Transform:
   m_ObjectHideFlags: 0
@@ -3626,7 +3626,7 @@ MonoBehaviour:
   songPositionInBeats: 0
   startgame: 0
   runing: 0
-  muicTrack: {fileID: 8300000, guid: d1c212467d7d660438308463c17b1090, type: 3}
+  muicTrack: {fileID: 0}
 --- !u!4 &1454849424
 Transform:
   m_ObjectHideFlags: 0
